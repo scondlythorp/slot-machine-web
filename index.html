@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎰 Ultimate Casino Slot</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== LOGIN SCREEN ===== -->
+  <div id="login-screen">
+    <h1>🔐 Login / Register</h1>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <label>Select Avatar:</label>
+    <select id="avatar-select">
+      <option value="🧑">🧑</option>
+      <option value="👩">👩</option>
+      <option value="🧑‍💼">🧑‍💼</option>
+      <option value="👨‍🎨">👨‍🎨</option>
+      <option value="🧙‍♂️">🧙‍♂️</option>
+    </select>
+    <button onclick="login()">Login / Register</button>
+    <p id="login-msg"></p>
+  </div>
+
+  <!-- ===== GAME SCREEN ===== -->
+  <div id="game-screen" style="display:none;">
+    <h1>🎰 Ultimate Slot Machine</h1>
+    <p id="welcome"></p>
+
+    <h2 id="balance">Balance: GMD 500</h2>
+    <h3 id="jackpot">💰 Jackpot: GMD 5000</h3>
+
+    <!-- BET INPUT -->
+    <input type="number" id="bet-amount" placeholder="Enter bet amount" min="1" max="500">
+
+    <!-- SLOT MACHINE GRID (columns as reels) -->
+    <div class="machine">
+      <div class="reel" id="reel1"></div>
+      <div class="reel" id="reel2"></div>
+      <div class="reel" id="reel3"></div>
+    </div>
+
+    <button onclick="spin()">SPIN 🎰</button>
+    <button onclick="cashOut()">💵 Cash Out</button>
+
+    <p id="result"></p>
+
+    <!-- SOUND CONTROLS -->
+    <div class="sound-controls">
+      <label>🔊 Volume</label>
+      <input type="range" min="0" max="1" step="0.1" onchange="setVolume(this.value)">
+      <button onclick="toggleMute()">Mute / Unmute</button>
+    </div>
+
+    <!-- LEADERBOARD -->
+    <div class="leaderboard">
+      <h3>🏆 Leaderboard</h3>
+      <ol id="leaderboard-list"></ol>
+    </div>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!-- CONFETTI CANVAS -->
+  <canvas id="confetti"></canvas>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
