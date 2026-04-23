@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "from": "Banjul",
+    "to": "Serekunda",
+    "price": 25
+  },
+  {
+    "id": 2,
+    "from": "Brikama",
+    "to": "Banjul",
+    "price": 30
+  },
+  {
+    "id": 3,
+    "from": "Brusubi",
+    "to": "Cape Point",
+    "price": 50
+  }
+]
